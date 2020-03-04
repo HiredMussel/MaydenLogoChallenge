@@ -24,20 +24,34 @@
 			 create a rectangle for the bottom colour section -->
 		<div class="background">
 			<div class="center"></div>
-			<div class="left"></div>
+			<div class="leftContainer">
+			<!-- This container is for the area of green to the left of the "A" and needs two triangles due to
+				 the curved area at the top of the "A". I am allowing myself to overlap with the curved segment
+				 as approximating that well would take too many triangles to be worthwhile -->
+				<div class="leftBox">
+					<div class="left"></div>
+					<div class="topLeft"></div>
+				</div>
+				<div class="leftBox">
+					<div class="left"></div>
+					<div class="topLeft"></div>
+				</div>
+			</div>
 			<div class="right"></div>
 			<!-- This is a container for the rectangular area of blue underneath the "A"
 				 Most of the triangles in this document are doubled up. This is because rounding
 				 errors cause tiny borders to appear between the triangles, and showing each
 				 triangle twice seems to make these smaller -->
-			<div class="rectangleContainer">
-				<div class="rectangleBox">
-					<div class="rectTri1"></div>
-					<div class="rectTri2"></div>
+			<div class="bottomContainer">
+				<div class="bottomBox">
+					<div class="bottomTri1"></div>
+					<div class="bottomTri2"></div>
+					<div class="bottomTri3"></div>
+					<div class="bottomTri4"></div>
 				</div>
-				<div class="rectangleBox">
-					<div class="rectTri1"></div>
-					<div class="rectTri2"></div>
+				<div class="bottomBox">
+					<div class="bottomTri1"></div>
+					<div class="bottomTri2"></div>
 				</div>
 			</div>
 		</div>

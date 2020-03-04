@@ -42,7 +42,7 @@ body {
 	width: 1em;
 	height: 1em;
 	margin: 0 auto;
-	background-color: #FFFFFF;
+	background-color: #000000;
 	
 	border-radius: 50%;
 }
@@ -65,50 +65,86 @@ body {
 	border-right: 0.25em solid transparent;
 }
 
+/* green area to left of background */
+
 .left {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -0.06em;
 	width: 0;
 	border-top: 1em solid #94ba66;
 	border-left: 0 solid transparent;
 	border-right: 0.5em solid transparent;
 }
 
+.topLeft {
+	position: absolute;
+	top: -0.126em;
+	left: 0.387em;
+	width: 0;
+	border-bottom: 0.226em solid #94ba66;
+	border-left: 0.113em solid transparent;
+	border-right: 0 solid transparent;
+}
+
+/* teal area to right of background */
+
 .right {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -0.05em;
 	width: 0;
 	border-top: 1em solid #298fb0;
 	border-left: 0.5em solid transparent;
 	border-right: 0 solid transparent;
 }
 
-.rectangleContainer {
+/* blue area to bottom of background */
+
+.bottomContainer {
 	position: absolute;
 	top: 1.063em;
-	left: 0.204em;
+	left: 0.299em;
 }
 
-.rectTri1 {
+.bottomTri1 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 0;
-	border-bottom: 0.437em solid #295074;
+	border-bottom: 0.337em solid #295074;
 	border-left: 0 solid transparent;
-	border-right: 0.581em solid transparent;
+	border-right: 0.395em solid transparent;
 }
 
-.rectTri2 {
+.bottomTri2 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 0;
-	border-top: 0.437em solid #295074;
-	border-left: 0.581em solid transparent;
+	border-top: 0.337em solid #295074;
+	border-left: 0.395em solid transparent;
 	border-right: 0 solid transparent;
+}
+
+.bottomTri3 {
+	position: absolute;
+	bottom: 0;
+	left: -0.164em;
+	width: 0;
+	border-bottom: 0.337em solid #295074;
+	border-left: 0.164em solid transparent;
+	border-right: 0 solid transparent;
+}
+
+.bottomTri4 {
+	position: absolute;
+	bottom: 0;
+	left: 0.395em;
+	width: 0;
+	border-bottom: 0.337em solid #295074;
+	border-left: 0 solid transparent;
+	border-right: 0.164em solid transparent;
 }
 
 /* Letter "A" */
@@ -179,7 +215,7 @@ body {
 .aTopBox{
 	position:absolute;
 	overflow:visible;
-	left: 0.43em;
+	left: 0.434em;
 	top:-0.07em;
 	height:0.1em;
 	width:auto;
@@ -273,9 +309,9 @@ body {
 	bottom: 0;
 	left: 0;
 	transform-origin: 0 100%;
-	transform: translate(0.906em,-0.1em);
+	transform: translate(0.906em,-0.094em);
 	width: 0;
-	border-bottom: 0.1em solid white;
+	border-bottom: 0.106em solid white;
 	border-left: 0 solid transparent;
 	border-right: 0.212em solid transparent;
 }
@@ -290,7 +326,7 @@ body {
 
 	
 	width: 0;
-	border-bottom: 0.1em solid white;
+	border-bottom: 0.106em solid white;
 	border-left: 0 solid transparent;
 	border-right: 0.212em solid transparent;
 }
@@ -305,7 +341,7 @@ body {
 
 	
 	width: 0;
-	border-bottom: 0.1em solid white;
+	border-bottom: 0.106em solid white;
 	border-left: 0 solid transparent;
 	border-right: 0.212em solid transparent;
 }
