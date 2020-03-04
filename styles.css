@@ -1,0 +1,336 @@
+/*	Explanation: Any arbitrary triangle may be created in CSS using the following template: */
+
+.triangle {
+	/*  The triangle is made by exploiting the fact that a CSS border of more than 1 pixel thickness will be split
+		into four sections separated by a straight line. By making only one of the four quadrants of the border
+		visible and setting the width of the element to zero, we can create a triangle! */
+	
+	/* 	width: 0; is the command which ensures that we are working with a triangle rather than a trapezium.
+		this trick allows the creation of trapezia as well, but I'll only be using triangles here */
+	width: 0;
+	
+	/* we need to choose one of the four borders of the element to fill with a solid colour. This will be our triangle */
+	border-bottom: 100px solid black;
+	
+	/*  now, the triangle's properties are determined by the width of the borders.
+		If you lie a triangle along its hypotenuse, it will always be possible to split it into two right-angled triangles:
+		one on the left and one on the right. The thickness of "border-top" determines the triangle's height*/
+	
+	/*	border-left controls the width of the "left-hand triangle". The hypotenuse of the left-hand triangle is one of the edges
+		of the triangle */
+	border-left: 0.581em solid transparent;
+	/*	similarly, border-right controls the width of the "right-hand triangle" */
+	border-right: 0 solid transparent;
+	
+	/*	combining this with the rotate transformation allows any triangle to be created in only CSS and HTML */
+}
+
+body {
+	/* Declaring font size here and declaring widths in ems will allow easy scaling of triangles later */
+	font-size: 62.5%;
+}
+
+/* Circular canvas for academy logo */
+.canvas {
+	display:block;
+	position: relative;
+	overflow: hidden;
+	
+	/* fix canvas as having unit height for ease of calculation */
+	font-size: 30em;
+	
+	width: 1em;
+	height: 1em;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	
+	border-radius: 50%;
+}
+
+/* Background */
+
+.background {
+	position: absolute;
+	height: 1em;
+	width: 1em;
+}
+
+.center {
+	position: absolute;
+	bottom: 0.4em;
+	left: 0.24em;
+	width: 0;
+	border-bottom: 0.27em solid #f27324;
+	border-left: 0.25em solid transparent;
+	border-right: 0.25em solid transparent;
+}
+
+.left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	border-top: 1em solid #94ba66;
+	border-left: 0 solid transparent;
+	border-right: 0.5em solid transparent;
+}
+
+.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	border-top: 1em solid #298fb0;
+	border-left: 0.5em solid transparent;
+	border-right: 0 solid transparent;
+}
+
+.rectangleContainer {
+	position: absolute;
+	top: 1.063em;
+	left: 0.204em;
+}
+
+.rectTri1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	border-bottom: 0.437em solid #295074;
+	border-left: 0 solid transparent;
+	border-right: 0.581em solid transparent;
+}
+
+.rectTri2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	border-top: 0.437em solid #295074;
+	border-left: 0.581em solid transparent;
+	border-right: 0 solid transparent;
+}
+
+/* Letter "A" */
+
+.aShift {
+	position: absolute;
+	top: 0.01em;
+	width: 100%;
+	height: 100%;
+}
+
+/* crossbar on the "A" */
+
+.trapeziumContainer {
+	position: absolute;
+	left: 0.296em;
+	top: 0.52em;
+	height:0.2em;
+}
+
+.trapeziumBox {
+	height:0.147em;
+	width:0.401em;
+}
+
+.trapTri1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	border-bottom: 0.147em solid white;
+	border-left: 0.074em solid transparent;
+	border-right: 0 solid transparent;
+}
+
+.trapTri2 {
+	position: absolute;
+	bottom: 0;
+	left: 0.074em;
+	width: 0;
+	border-bottom: 0.147em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.254em solid transparent;
+}
+
+.trapTri3 {
+	position: absolute;
+	bottom:0;
+	left: 0.074em;
+	width: 0;
+	border-top: 0.147em solid white;
+	border-left: 0.254em solid transparent;
+	border-right: 0 solid transparent;
+}
+
+.trapTri4 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	border-bottom: 0.147em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.074em solid transparent;
+}
+
+/* Top of the "A" */
+
+.aTopBox{
+	position:absolute;
+	overflow:visible;
+	left: 0.43em;
+	top:-0.07em;
+	height:0.1em;
+	width:auto;
+}
+
+.aTop {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: 	rotate(90deg);
+	width: 0;
+	border-bottom: 0.083em solid white;
+	border-left: 0.166em solid transparent;
+	border-right: 0.05em solid transparent;
+}
+
+.aCircleBox {
+	overflow: hidden;
+	position: absolute;
+	height: 0.2em;
+	width: 0.2em;
+	left: 0.3em;
+	top: -0.11em;
+	height: 0.2em;
+}
+
+.circleRoundTop {
+	position:absolute;
+	right:-0.1em;
+	bottom:-0.1em;
+	width:0.2em;
+	height:0.2em;
+	border-radius:50%;
+	background-color:white;
+}
+
+/* Left arm of the "A" */
+
+.aLeftContainer {
+	position: absolute;
+	overflow:visible;
+	height: 0.2em;
+	width:1.118em;
+	
+	bottom: -0.189em;
+	left: 0em;
+}
+
+.aLeftBox {
+	position:absolute;
+	bottom: 0;
+	left: 0.0em;
+	width:1.118em;
+	
+	transform-origin: 0 50%;
+	transform: rotate(-63.43deg);
+	top: 0;
+}
+
+.triangle1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+	transform: 	none;
+
+	
+	width: 0;
+	border-bottom: 0.2em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.906em solid transparent;
+}
+
+.triangle2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+	transform: 	rotate(180deg)
+				translate(-0.906em,0.2em);
+
+	
+	width: 0;
+	border-bottom: 0.2em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.906em solid transparent;
+}
+
+.triangle3 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+	transform: translate(0.906em,-0.1em);
+	width: 0;
+	border-bottom: 0.1em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.212em solid transparent;
+}
+
+.triangle4 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+	transform: 	rotate(180deg)
+				translate(-1.118em,0.2em);
+
+	
+	width: 0;
+	border-bottom: 0.1em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.212em solid transparent;
+}
+
+.triangle5 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform-origin: 0 100%;
+	transform: 	scale(1, -1)
+				translate(0.906em,0.1em);
+
+	
+	width: 0;
+	border-bottom: 0.1em solid white;
+	border-left: 0 solid transparent;
+	border-right: 0.212em solid transparent;
+}
+
+/* Right arm of the "A". Made from the same components as the left arm, but reflected */
+
+.aRightContainer {
+	position: absolute;
+	overflow:visible;
+	height: 0.2em;
+	width:1.118em;
+	
+	bottom: -0.189em;
+	right: -1.11em;
+}
+
+.aRightBox {
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	width:1.118em;
+	
+	transform-origin: 0 50%;
+	transform:  scale(-1, 1)
+				rotate(-63.43deg);
+	
+	top: 0;
+}

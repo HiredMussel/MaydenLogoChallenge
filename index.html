@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+	<title>Mayden Academy Logo</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+</body>
+
+<!--	Explanation: This approach to creating the Mayden Academy logo is based around the use of triangles. The ability
+		to create an arbitrary triangle in CSS means that it is possible to create an arbitrary shape not containing
+		curved lines from only triangles. The mayden academy logo has two curved lines - one is the circular border
+		surrounding it and the other is a small curved section at the top of the "A"
+		As such, I have recreated the logo using only these two circles and trianges. Furthermore, none of the triangles
+		overlap (though rounding errors mean that there will be some very small overlaps) -->
+
+
+
+	<div class="canvas">
+		
+		<!-- background to go behind letter "A" mask -->
+		<!-- background is made from 5 triangles. One for each of the central, left and right colours and two to 
+			 create a rectangle for the bottom colour section -->
+		<div class="background">
+			<div class="center"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<!-- This is a container for the rectangular area of blue underneath the "A"
+				 Most of the triangles in this document are doubled up. This is because rounding
+				 errors cause tiny borders to appear between the triangles, and showing each
+				 triangle twice seems to make these smaller -->
+			<div class="rectangleContainer">
+				<div class="rectangleBox">
+					<div class="rectTri1"></div>
+					<div class="rectTri2"></div>
+				</div>
+				<div class="rectangleBox">
+					<div class="rectTri1"></div>
+					<div class="rectTri2"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- This is a container to shift the entire "A" mask relative to the backgrond -->
+		<div class="aShift">
+			<!-- This, along with the circular canvas, is the only element on the page which is not a triangle
+				 it generates the curved section at the top of the left arm of the "A" -->
+		<div class="aCircleBox">
+			<div class=circleRoundTop></div>
+		</div>
+		
+		<!-- The trapezium referenced is the crossbar on the "A". It is made of 4 triangles -->
+		<div class="trapeziumContainer">	
+			<div class="trapeziumBox">
+				<div class="trapTri1"></div>
+				<div class="trapTri2"></div>
+				<div class="trapTri3"></div>
+				<div class="trapTri4"></div>
+			</div>
+		</div>
+		
+		<!-- A single triangle for the top-right of the a, to account for the difference in length of the character's
+			 left and right "arms". As with many other triangles on this page, this is doubled up in order to make
+			 the lines between the triangles less visible -->
+		<div class="aTopBox">
+			<div class="aTop"></div>
+			<div class="aTop"></div>
+		</div>
+		
+		<!-- Each of the left and right arms of the "A" has its own container associated to it. Each of these is made
+			 from five triangles. -->
+		<div class=aLeftContainer>
+			<div class="aLeftBox">
+				<div class="triangle1"></div>
+				<div class="triangle2"></div>
+				<div class="triangle3"></div>
+				<div class="triangle4"></div>
+				<div class="triangle5"></div>
+		</div>		
+
+			<div class="aLeftBox">
+				<div class="triangle1"></div>
+				<div class="triangle2"></div>
+				<div class="triangle3"></div>
+				<div class="triangle4"></div>
+				<div class="triangle5"></div>
+			</div>
+		</div>
+		<div class=aRightContainer>
+			<div class="aRightBox">
+				<div class="triangle1"></div>
+				<div class="triangle2"></div>
+				<div class="triangle3"></div>
+				<div class="triangle4"></div>
+				<div class="triangle5"></div>
+			</div>
+		
+			<div class="aRightBox">
+				<div class="triangle1"></div>
+				<div class="triangle2"></div>
+				<div class="triangle3"></div>
+				<div class="triangle4"></div>
+				<div class="triangle5"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+</html>
