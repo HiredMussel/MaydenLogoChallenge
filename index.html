@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mayden Academy Logo</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet"type="text/css"href="styles.css">
 </head>
 </body>
 
@@ -19,13 +19,13 @@
 
 	<div class="canvas">
 		
-		<!-- background to go behind letter "A" mask -->
+		<!-- background to go behind letter "A"mask -->
 		<!-- background is made from 5 triangles. One for each of the central, left and right colours and two to 
 			 create a rectangle for the bottom colour section -->
 		<div class="background">
 			<div class="center"></div>
 			<div class="leftContainer">
-			<!-- This container is for the area of green to the left of the "A" and needs two triangles due to
+			<!-- This container is for the area of green to the left of the "A"and needs two triangles due to
 				 the curved area at the top of the "A". I am allowing myself to overlap with the curved segment
 				 as approximating that well would take too many triangles to be worthwhile -->
 				<div class="leftBox">
@@ -52,20 +52,28 @@
 				<div class="bottomBox">
 					<div class="bottomTri1"></div>
 					<div class="bottomTri2"></div>
+					<div class="bottomTri3"></div>
+					<div class="bottomTri4"></div>
 				</div>
 			</div>
 		</div>
 		
-		<!-- This is a container to shift the entire "A" mask relative to the backgrond -->
+		<!-- This is a container to shift the entire "A"mask relative to the backgrond -->
 		<div class="aShift">
 			<!-- This, along with the circular canvas, is the only element on the page which is not a triangle
-				 it generates the curved section at the top of the left arm of the "A" -->
+				 it generates the curved section at the top of the left arm of the "A"-->
 		<div class="aCircleBox">
-			<div class=circleRoundTop></div>
+			<div class="circleRoundTop"></div>
 		</div>
 		
 		<!-- The trapezium referenced is the crossbar on the "A". It is made of 4 triangles -->
 		<div class="trapeziumContainer">	
+			<div class="trapeziumBox">
+				<div class="trapTri1"></div>
+				<div class="trapTri2"></div>
+				<div class="trapTri3"></div>
+				<div class="trapTri4"></div>
+			</div>
 			<div class="trapeziumBox">
 				<div class="trapTri1"></div>
 				<div class="trapTri2"></div>
@@ -82,7 +90,7 @@
 			<div class="aTop"></div>
 		</div>
 		
-		<!-- Each of the left and right arms of the "A" has its own container associated to it. Each of these is made
+		<!-- Each of the left and right arms of the "A"has its own container associated to it. Each of these is made
 			 from five triangles. -->
 		<div class=aLeftContainer>
 			<div class="aLeftBox">

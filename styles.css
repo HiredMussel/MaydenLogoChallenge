@@ -236,8 +236,8 @@ body {
 	overflow: hidden;
 	position: absolute;
 	height: 0.2em;
-	width: 0.2em;
-	left: 0.3em;
+	width: 0.202em;
+	left: 0.299em;
 	top: -0.11em;
 	height: 0.2em;
 }
@@ -246,7 +246,7 @@ body {
 	position:absolute;
 	right:-0.1em;
 	bottom:-0.1em;
-	width:0.2em;
+	width:0.202em;
 	height:0.2em;
 	border-radius:50%;
 	background-color:white;
@@ -370,3 +370,5 @@ body {
 	
 	top: 0;
 }
+
+/*  piece hides on mouse-over */
